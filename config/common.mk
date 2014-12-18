@@ -99,6 +99,10 @@ PRODUCT_COPY_FILES += \
 # userinit support
 PRODUCT_COPY_FILES += \
     vendor/cm/prebuilt/common/etc/init.d/90userinit:system/etc/init.d/90userinit
+    
+# Copy latinime for gesture typing
+PRODUCT_COPY_FILES += \
+	vendor/cm/prebuilt/common/lib/libjni_latinime.so:system/lib/libjni_latinime.so
 
 # CM-specific init file
 PRODUCT_COPY_FILES += \
