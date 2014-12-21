@@ -150,7 +150,6 @@ PRODUCT_PACKAGES += \
 
 # Custom CM packages
 PRODUCT_PACKAGES += \
-    Trebuchet \
     AudioFX \
     CMWallpapers \
     Eleven \
