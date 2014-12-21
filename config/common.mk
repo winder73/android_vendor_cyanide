@@ -66,6 +66,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Workaround for NovaLauncher zipalign fails
 PRODUCT_COPY_FILES += \
 		vendor/cm/prebuilt/common/app/NovaLauncher.apk:system/app/NovaLauncher.apk
+		
+# Workaround for ESFileManager zipalign fails
+PRODUCT_COPY_FILES += \
+		vendor/cm/prebuilt/common/app/ESFileManager.apk:system/app/ESFileManager.apk
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.build.selinux=1
@@ -149,7 +153,6 @@ PRODUCT_PACKAGES += \
     Trebuchet \
     AudioFX \
     CMWallpapers \
-    CMFileManager \
     Eleven \
     LockClock \
     CMAccount \
