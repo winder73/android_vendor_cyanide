@@ -151,11 +151,9 @@ PRODUCT_PACKAGES += \
 # Custom CM packages
 PRODUCT_PACKAGES += \
     AudioFX \
-    CMWallpapers \
     Eleven \
     LockClock \
-    CMAccount \
-    CMHome
+    CMAccount
 
 # CM Hardware Abstraction Framework
 PRODUCT_PACKAGES += \
