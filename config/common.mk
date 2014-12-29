@@ -153,8 +153,7 @@ PRODUCT_PACKAGES += \
     AudioFX \
     Eleven \
     LockClock \
-    CMAccount \
-    OmniSwitch
+    CMAccount
 
 # CM Hardware Abstraction Framework
 PRODUCT_PACKAGES += \
