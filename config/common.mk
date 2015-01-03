@@ -112,6 +112,11 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/cm/prebuilt/common/etc/init.d/90userinit:system/etc/init.d/90userinit
     
+# SuperSU
+PRODUCT_COPY_FILES += \
+	vendor/cm/prebuilt/common/etc/UPDATE-SuperSU.zip:system/addon.d/UPDATE-SuperSU.zip \
+	vendor/cm/prebuilt/common/etc/init.d/99SuperSUDaemon:system/etc/init.d/99SuperSUDaemon
+
 # Copy latinime for gesture typing
 PRODUCT_COPY_FILES += \
 	vendor/cm/prebuilt/common/lib/libjni_latinime.so:system/lib/libjni_latinime.so
