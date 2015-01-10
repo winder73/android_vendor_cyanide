@@ -308,7 +308,7 @@ else
 endif
 
 PRODUCT_PROPERTY_OVERRIDES += \
-  ro.cyanide.version=3.0 \
+  ro.cyanide.version=3.5 \
   ro.cm.releasetype=$(CM_BUILDTYPE) \
   ro.modversion=$(CM_VERSION) \
   ro.cmlegal.url=http://www.cyanogenmod.org/docs/privacy
