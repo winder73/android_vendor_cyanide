@@ -2,4 +2,5 @@ for combo in $(curl -s https://raw.githubusercontent.com/CyanogenMod/hudson/mast
 do
     add_lunch_combo $combo
     add_lunch_combo cm_i777-userdebug
+    add_lunch_combo cm_m8-userdebug
 done
