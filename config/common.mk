@@ -166,6 +166,7 @@ PRODUCT_PACKAGES += \
 # Custom CM packages
 PRODUCT_PACKAGES += \
     AudioFX \
+    CyanideCenter \
     Eleven \
     LockClock \
     OmniSwitch \
