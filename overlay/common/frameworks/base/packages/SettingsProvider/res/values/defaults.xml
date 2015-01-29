@@ -30,5 +30,5 @@
     -->
 
     <!-- Default for Settings.Secure.STATS_COLLECTION. -->
-    <bool name="def_cm_stats_collection">true</bool>
+    <bool name="def_cm_stats_collection">false</bool>
 </resources>
