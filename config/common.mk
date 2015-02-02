@@ -70,6 +70,10 @@ PRODUCT_COPY_FILES += \
 # Workaround for ESFileManager zipalign fails
 PRODUCT_COPY_FILES += \
 		vendor/cyanide/prebuilt/common/app/ESFileManager.apk:system/app/ESFileManager.apk
+		
+# Workaround for CyanideBlue zipalign fails
+PRODUCT_COPY_FILES += \
+		vendor/cyanide/prebuilt/common/app/CyanideBlue.apk:system/app/CyanideBlue.apk
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.build.selinux=1
