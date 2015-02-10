@@ -1,4 +1,4 @@
-# CyanogenMod Extras
+# CyanideL Extras
 import /init.superuser.rc
 
 on init
@@ -105,6 +105,7 @@ on boot
 
     chown system system /dev/cpuctl/apps/cpu.notify_on_migrate
     chmod 0664 /dev/cpuctl/apps/cpu.notify_on_migrate
+    chmod 755 /res/uci.sh
 
     # Define TCP delayed ack settings for WiFi & LTE
     chown system system /sys/kernel/ipv4/tcp_delack_seg
@@ -129,3 +130,9 @@ service sysinit /system/bin/sysinit
     user root
     oneshot
     disabled
+
+# shift init
+service postinit /sbin/ext/post-init-cm.sh
+	class core
+	user root
+	oneshot
