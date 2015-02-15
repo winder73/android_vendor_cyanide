@@ -30,7 +30,6 @@ BOARD_SEPOLICY_UNION += \
     sysinit.te \
     system.te \
     ueventd.te \
-    uncrypt.te \
     userinit.te \
     vold.te \
     system_app.te \

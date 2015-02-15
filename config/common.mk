@@ -177,7 +177,8 @@ PRODUCT_PACKAGES += \
     Eleven \
     LockClock \
     OmniSwitch \
-    CMAccount
+    CMAccount \
+    ShiftTools
 
 # CM Hardware Abstraction Framework
 PRODUCT_PACKAGES += \
