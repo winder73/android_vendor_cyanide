@@ -178,7 +178,7 @@ PRODUCT_PACKAGES += \
     LockClock \
     OmniSwitch \
     CMAccount \
-    ShiftTools
+    ShiftTools 
 
 # CM Hardware Abstraction Framework
 PRODUCT_PACKAGES += \
@@ -323,7 +323,7 @@ else
 endif
 
 PRODUCT_PROPERTY_OVERRIDES += \
-  ro.cyanide.version=6.2 \
+  ro.cyanide.version=$(CYANIDE_VERSION) \
   ro.cyanide.releasetype=$(CYANIDE_BUILDTYPE) \
   ro.modversion=$(CYANIDE_VERSION) \
   ro.cmlegal.url=http://www.cyanogenmod.org/docs/privacy
