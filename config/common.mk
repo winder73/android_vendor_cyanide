@@ -1,8 +1,5 @@
 PRODUCT_BRAND ?= cyanide
 
-SUPERUSER_EMBEDDED := true
-SUPERUSER_PACKAGE_PREFIX := com.android.settings.cyanogenmod.superuser
-
 ifneq ($(TARGET_SCREEN_WIDTH) $(TARGET_SCREEN_HEIGHT),$(space))
 # determine the smaller dimension
 TARGET_BOOTANIMATION_SIZE := $(shell \
@@ -83,12 +80,8 @@ PRODUCT_PROPERTY_OVERRIDES += persist.sys.dun.override=0
 
 ifneq ($(TARGET_BUILD_VARIANT),eng)
 # Enable ADB authentication
-ADDITIONAL_DEFAULT_PROPERTIES += ro.adb.secure=1
+ADDITIONAL_DEFAULT_PROPERTIES += ro.adb.secure=0
 endif
-
-# Copy over the changelog to the device
-PRODUCT_COPY_FILES += \
-    vendor/cyanide/CHANGELOG.mkdn:system/etc/CHANGELOG-CM.txt
 
 # Backup Tool
 ifneq ($(WITH_GMS),true)
@@ -125,9 +118,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
 	vendor/cyanide/prebuilt/common/lib/libjni_latinime.so:system/lib/libjni_latinime.so
 
-# CM-specific init file
+# CYANIDE-specific init file
 PRODUCT_COPY_FILES += \
-    vendor/cyanide/prebuilt/common/etc/init.local.rc:root/init.cm.rc
+    vendor/cyanide/prebuilt/common/etc/init.local.rc:root/init.cyanide.rc
 
 # Bring in camera effects
 PRODUCT_COPY_FILES +=  \
@@ -153,13 +146,13 @@ PRODUCT_COPY_FILES += \
 # T-Mobile theme engine
 include vendor/cyanide/config/themes_common.mk
 
-# Required CM packages
+# Required CYANIDE packages
 PRODUCT_PACKAGES += \
     Development \
     LatinIME \
     BluetoothExt
 
-# Optional CM packages
+# Optional CYANIDE packages
 PRODUCT_PACKAGES += \
     VoicePlus \
     Basic \
@@ -185,7 +178,7 @@ PRODUCT_PACKAGES += \
     org.cyanogenmod.hardware \
     org.cyanogenmod.hardware.xml
 
-# Extra tools in CM
+# Extra tools in CYANIDE
 PRODUCT_PACKAGES += \
     libsepol \
     openvpn \
@@ -237,9 +230,7 @@ ifneq ($(TARGET_BUILD_VARIANT),user)
 
 PRODUCT_PACKAGES += \
     procmem \
-    procrank \
-    Superuser \
-    su
+    procrank
     
 # HFM Files
 PRODUCT_COPY_FILES += \
@@ -251,7 +242,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 else
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.sys.root_access=0
+    persist.sys.root_access=1
 
 endif
 
@@ -324,8 +315,7 @@ endif
 PRODUCT_PROPERTY_OVERRIDES += \
   ro.cyanide.version=$(CYANIDE_VERSION) \
   ro.cyanide.releasetype=$(CYANIDE_BUILDTYPE) \
-  ro.modversion=$(CYANIDE_VERSION) \
-  ro.cmlegal.url=http://www.cyanogenmod.org/docs/privacy
+  ro.modversion=$(CYANIDE_VERSION) 
 
 -include vendor/cm-priv/keys/keys.mk
 
