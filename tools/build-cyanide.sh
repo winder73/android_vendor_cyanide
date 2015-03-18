@@ -162,7 +162,7 @@ echo -e ${bldblu}"Getting your device"${txtrst}
 lunch "cyanide_$device-userdebug";
 
 echo -e ""
-echo -e ${bldblu}"Off like a prom dress"${txtrst}
+echo -e ${bldblu}"Cyanide build commencing, this shit is the bomb hahaha!!!!"${txtrst}
 
 # start compilation
 if [ "$opt_dex" -ne 0 ]; then
