@@ -72,6 +72,10 @@ PRODUCT_COPY_FILES += \
 #PRODUCT_COPY_FILES += \
 #		vendor/cyanide/prebuilt/common/app/CyanideBlue.apk:system/app/CyanideBlue.apk
 
+# Workaround for Exchange Services zipalign fails
+PRODUCT_COPY_FILES += \
+		vendor/cyanide/prebuilt/common/app/ExchangeServices.apk:system/app/ExchangeServices.apk
+
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.build.selinux=1
 
