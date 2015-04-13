@@ -159,19 +159,12 @@ PRODUCT_PACKAGES += \
     libemoji \
     Terminal
 
-# Screen recorder
-PRODUCT_PACKAGES += \
-	ScreenRecorder \
-	libscreenrecorder
-
 # Custom CM packages
 PRODUCT_PACKAGES += \
-    AudioFX \
     Eleven \
     LockClock \
     OmniSwitch \
-    CMAccount \
-    ShiftTools 
+    CMAccount 
 
 # CM Hardware Abstraction Framework
 PRODUCT_PACKAGES += \
