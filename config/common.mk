@@ -154,17 +154,15 @@ PRODUCT_PACKAGES += \
 
 # Optional CYANIDE packages
 PRODUCT_PACKAGES += \
-    VoicePlus \
     Basic \
-    libemoji \
-    Terminal
+    libemoji
 
 # Custom CM packages
 PRODUCT_PACKAGES += \
     Eleven \
     LockClock \
     OmniSwitch \
-    CMAccount 
+    CMAccount
 
 # CM Hardware Abstraction Framework
 PRODUCT_PACKAGES += \
@@ -243,7 +241,7 @@ PRODUCT_PACKAGE_OVERLAYS += vendor/cyanide/overlay/common
 
 CYANIDE_BUILDTYPE = RELEASE
 PRODUCT_VERSION_MAJOR = 5.1
-PRODUCT_VERSION_MAINTENANCE = RC-11.0
+PRODUCT_VERSION_MAINTENANCE = RC-11.2
 
 # Set CYANIDE_BUILDTYPE from the env RELEASE_TYPE, for jenkins compat
 
